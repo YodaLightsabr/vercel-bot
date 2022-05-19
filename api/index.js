@@ -3,14 +3,14 @@ const {
     InteractionType,
     verifyKey,
   } = require("discord-interactions");
-  
+
   const INVITE_COMMAND = {
-    name: "Invite",
+    name: "invite",
     description: "Get an invite link to add the bot to your server",
   };
   
   const HI_COMMAND = {
-    name: "Hi",
+    name: "hi",
     description: "Say hello!",
   };
   
@@ -53,7 +53,7 @@ const {
       } else if (message.type === InteractionType.APPLICATION_COMMAND) {
         // Handle our Slash Commands
         switch (message.data.name.toLowerCase()) {
-          case SLAP_COMMAND.name.toLowerCase():
+          case HI_COMMAND.name.toLowerCase():
             response.status(200).send({
               type: 4,
               data: {
